@@ -3,6 +3,7 @@ version: "3"
 services:
   server1:
     image: orientdb:latest
+    command: dserver.sh
     volumes:
     - ./config:/opt/orientdb/config
     ports:
@@ -13,6 +14,7 @@ services:
       ORIENTDB_NODE_NAME: server1
   server2:
     image: orientdb:latest
+    command: dserver.sh
     volumes:
     - ./config:/opt/orientdb/config
     ports:
