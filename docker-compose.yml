@@ -3,19 +3,23 @@ version: "3"
 services:
   server1:
     image: orientdb:latest
-    container_name: server1
     volumes:
     - ./config:/opt/orientdb/config
     ports:
     - 2424:2424
+    - 2480:2480
     environment:
-    - ORIENTDB_ROOT_PASSWORD=root
+      ORIENTDB_ROOT_PASSWORD: root
+      ORIENTDB_NODE_NAME: server1
   server2:
     image: orientdb:latest
-    container_name: server2
     volumes:
     - ./config:/opt/orientdb/config
     ports:
-    - 2424:2424
+    - 2425:2424
+    - 2481:2480
     environment:
-    - ORIENTDB_ROOT_PASSWORD=root
+      ORIENTDB_ROOT_PASSWORD: root
+      ORIENTDB_NODE_NAME: server2
+    depends_on:
+      - server1

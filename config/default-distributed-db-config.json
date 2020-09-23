@@ -1,33 +1,21 @@
 {
     "autoDeploy": true,
+    "hotAlignment": false,
     "executionMode": "undefined",
     "readQuorum": 1,
-    "writeQuorum": "majority",
+    "writeQuorum": 1,
+    "failureAvailableNodesLessQuorum": false,
     "readYourWrites": true,
-    "newNodeStrategy": "static",
-    "dataCenters": {
-        "rome": {
-            "writeQuorum": "majority",
-            "servers": [ "europe-0", "europe-1", "europe-2" ]
-        },
-        "denver": {
-            "writeQuorum": "majority",
-            "servers": [ "usa-0", "usa-1", "usa-2" ]
-        }
-    },
     "servers": {
         "*": "master"
     },
     "clusters": {
         "internal": {
         },
-        "product": {
-            "servers": ["usa", "china"]
+        "index": {
         },
-        "employee_usa": {
-            "owner": "usa",
-            "servers": ["usa", "<NEW_NODE>"]
-        },
-        "*": { "servers" : [ "<NEW_NODE>" ] }
+        "*": {
+            "servers": ["<NEW_NODE>"]
+        }
     }
 }
