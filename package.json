@@ -1,0 +1,22 @@
+{
+  "name": "orientdb-sandbox",
+  "version": "1.0.0",
+  "description": "```bash docker run -d --name orientdb -p 2424:2424 -p 2480:2480 -e ORIENTDB_ROOT_PASSWORD=root orientdb:latest ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvivdevclub/OrientDB-sandbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvivdevclub/OrientDB-sandbox/issues"
+  },
+  "homepage": "https://github.com/lvivdevclub/OrientDB-sandbox#readme",
+  "dependencies": {
+    "orientjs": "^3.0.11"
+  }
+}
